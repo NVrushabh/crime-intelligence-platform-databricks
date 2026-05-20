@@ -18,8 +18,8 @@ This project demonstrates a modern lakehouse architecture for ingesting, transfo
 - Implement Medallion Architecture (Bronze → Silver → Gold)
 - Develop machine learning models for crime intelligence
 - Detect linked crime patterns using graph analytics
-- Create executive-level interactive dashboards
-- Demonstrate MLOps workflows with MLflow
+- Create executive-level analytical dashboards
+- Demonstrate MLOps workflows using MLflow
 
 ---
 
@@ -40,44 +40,45 @@ This project demonstrates a modern lakehouse architecture for ingesting, transfo
 
 # Medallion Architecture
 
-## Bronze Layer — Raw Ingestion
-- Ingested raw Chicago crime CSV data
+## Bronze Layer — Raw Data Ingestion
+- Ingested raw Chicago crime CSV dataset
 - Stored immutable raw Delta tables
-- Preserved original schema and history
+- Preserved original schema and source history
 
-## Silver Layer — Data Processing
-- Data cleaning and validation
-- Null handling and type casting
-- Feature engineering
-- Temporal enrichment
+## Silver Layer — Data Processing & Feature Engineering
+- Data cleaning and preprocessing
+- Null handling and schema standardization
+- Feature engineering for analytics and ML
+- Temporal and categorical transformations
 
-## Gold Layer — Analytics
-Created business-ready analytics tables for:
+## Gold Layer — Business Analytics
+Created analytics-ready Delta tables for:
 - Crime hotspots
 - Seasonal crime trends
-- Hourly activity patterns
+- Hourly crime activity
 - Arrest analysis
 - Top crime categories
-- Crime series detection
+- Crime series pattern detection
 
 ---
 
 # Machine Learning Models
 
 ## 1. Crime Type Classifier
-Predicts crime categories using historical incident patterns.
+Predicts crime categories using historical incident patterns and contextual features.
 
 ## 2. Arrest Likelihood Scorer
-Predicts probability of arrest for incidents.
+Predicts the probability of arrest for crime incidents.
 
 ## 3. Crime Hotspot Predictor
-Identifies high-risk districts and crime concentration zones.
+Identifies high-risk districts and recurring hotspot zones.
 
-### ML Features
+### ML Engineering Features
 - Feature engineering using PySpark
-- Model tracking with MLflow
-- Model Registry integration
-- Experiment versioning
+- MLflow experiment tracking
+- MLflow Model Registry integration
+- Versioned model management
+- Distributed model training
 
 ---
 
@@ -89,17 +90,21 @@ Implemented GraphFrames-based crime series detection to identify:
 - Linked geographic activity
 - Temporal crime clusters
 
+Graph analytics enabled detection of organized and recurring crime activity across districts.
+
 ---
 
 # Dashboard & Analytics
 
-Built interactive Databricks SQL dashboards including:
+Built Databricks SQL dashboards including:
 - Hourly Crime Activity Trends
 - District Crime Hotspots
 - Most Common Crime Types
 - Crime Volume by Season
 - Arrest Rate Analysis
 - Crime Series Pattern Detection
+
+The dashboard layer provides executive-level operational insights for crime intelligence workflows.
 
 ---
 
@@ -115,6 +120,7 @@ Built interactive Databricks SQL dashboards including:
 - Dashboard Engineering
 - Feature Engineering
 - Data Governance
+- Machine Learning Operations
 
 ---
 
@@ -140,6 +146,15 @@ Built interactive Databricks SQL dashboards including:
 │   └── dashboard_queries
 │
 └── README.md
+```
+
+---
+
+# Dashboard Preview
+
+Add dashboard screenshots here after exporting visualizations from Databricks SQL.
+
+---
 
 # Future Improvements
 
@@ -155,7 +170,7 @@ Built interactive Databricks SQL dashboards including:
 
 # Author
 
-**Vrushabh Anil Nikhade**  
+**Vrushabh Nikhade**  
 Master’s Student — Biomedical Engineering  
 Stevens Institute of Technology
 
