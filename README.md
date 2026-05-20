@@ -8,7 +8,7 @@ This project demonstrates a modern lakehouse architecture for ingesting, transfo
 
 # Project Architecture
 
-![Architecture Diagram](architecture/crime_platform_architecture.png)
+![Architecture Diagram](Architecture%20Diagram.png)
 
 ---
 
