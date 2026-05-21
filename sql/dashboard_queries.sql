@@ -1,58 +1,61 @@
 -- Hourly Crime Activity Trends
-
 SELECT
     Hour,
-    SUM(total_crimes) AS crimes
+    total_crimes,
+    arrest_rate,
+    domestic_crimes
 FROM workspace.default.gold_crimes_by_hour
-GROUP BY Hour
 ORDER BY Hour;
 
-
 -- District Crime Hotspots
-
 SELECT
     District,
-    SUM(total_crimes) AS total_crimes
-FROM workspace.default.gold_district_hotspots
-GROUP BY District
+    total_crimes,
+    arrest_rate,
+    pct_of_all_crimes
+FROM workspace.default.gold_crimes_by_district
 ORDER BY total_crimes DESC;
 
-
 -- Most Common Crime Types
-
 SELECT
     Primary_Type,
-    SUM(total_crimes) AS crimes
-FROM workspace.default.gold_top_crime_types
-GROUP BY Primary_Type
-ORDER BY crimes DESC;
+    total_crimes,
+    percentage,
+    arrest_rate
+FROM workspace.default.gold_top_crimes
+ORDER BY total_crimes DESC;
 
-
--- Crime Volume by Season
-
+-- Crime Volume by Season & Weekend
 SELECT
     Season,
-    SUM(total_crimes) AS crimes
-FROM workspace.default.gold_seasonal_trends
-GROUP BY Season
-ORDER BY crimes DESC;
-
+    Is_Weekend,
+    total_crimes,
+    arrest_rate,
+    night_crime_pct
+FROM workspace.default.gold_crimes_by_season
+ORDER BY total_crimes DESC;
 
 -- Arrest Rate by Crime Type
-
 SELECT
     Primary_Type,
-    arrest_rate_pct
-FROM workspace.default.gold_arrest_analysis
-ORDER BY arrest_rate_pct DESC;
-
+    arrest_rate,
+    total_arrests,
+    total_crimes
+FROM workspace.default.gold_top_crimes
+ORDER BY arrest_rate DESC;
 
 -- Detected Crime Series Patterns
+SELECT
+    block,
+    crime_type,
+    connections
+FROM workspace.default.gold_crime_series
+ORDER BY connections DESC
+LIMIT 20;
 
+-- Crime Type Connection Network
 SELECT
     crime_type,
-    district,
-    COUNT(*) AS connections
-FROM workspace.default.gold_crime_series_patterns
-GROUP BY crime_type, district
-ORDER BY connections DESC;
+    total_connections
+FROM workspace.default.gold_crime_type_connections
+ORDER BY total_connections DESC;
