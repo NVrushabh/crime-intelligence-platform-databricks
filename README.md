@@ -8,7 +8,7 @@ This project demonstrates a modern lakehouse architecture for ingesting, transfo
 
 # Project Architecture
 
-![Architecture Diagram](architecture/Architecture Diagram.png)
+![Architecture Diagram](architecture/Architecture%20Diagram.png)
 
 ---
 
