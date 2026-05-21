@@ -150,9 +150,15 @@ The dashboard layer provides executive-level operational insights for crime inte
 
 ---
 
-# Dashboard Preview
+## Main Crime Intelligence Dashboard
 
-Add dashboard screenshots here after exporting visualizations from Databricks SQL.
+![Crime Intelligence Dashboard](screenshots/dashboard.png)
+
+---
+
+## Detected Crime Series Patterns
+
+![Detected Crime Series Patterns](screenshots/Detected%20Crime%20Series%20Patterns.png)
 
 ---
 
