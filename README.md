@@ -128,19 +128,19 @@ The dashboard layer provides executive-level operational insights for crime inte
 
 ```bash
 ├── notebooks/
-│   ├── bronze_layer
-│   ├── silver_layer
-│   ├── gold_layer
-│   ├── ml_models
-│   ├── mlflow_registry
-│   ├── graph_analytics
-│   └── dashboards
+│   ├── 01_bronze_ingest
+│   ├── 02_silver_clean
+│   ├── 03_gold_aggregates
+│   ├── 04_ml_models
+│   ├── 05_mlflow_registry
+│   ├── 06_graph_analytics
+│   └── 07_databricks_sql_dashboard
 │
 ├── architecture/
-│   └── crime_platform_architecture.png
+│   └── Architecture Diagram
 │
 ├── screenshots/
-│   └── dashboard_images
+│   └── dashboard
 │
 ├── sql/
 │   └── dashboard_queries
@@ -170,7 +170,7 @@ Add dashboard screenshots here after exporting visualizations from Databricks SQ
 
 # Author
 
-**Vrushabh Nikhade**  
+**Vrushabh Anil Nikhade**  
 Master’s Student — Biomedical Engineering  
 Stevens Institute of Technology
 
