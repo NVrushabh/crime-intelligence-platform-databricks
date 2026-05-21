@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.env
+*.egg-info/
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+
+# Data files (don't upload large CSVs)
+*.csv
+*.parquet
+*.json
+
+# Databricks
+.databricks/
+*.dbc
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# MLflow
+mlruns/
+
+# Logs
+*.log
